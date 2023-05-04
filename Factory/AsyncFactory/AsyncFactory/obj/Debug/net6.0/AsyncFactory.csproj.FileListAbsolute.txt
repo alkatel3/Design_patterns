@@ -1,0 +1,15 @@
+D:\Design_patterns\Factory\AsyncFactory\AsyncFactory\obj\Debug\net6.0\AsyncFactory.csproj.AssemblyReference.cache
+D:\Design_patterns\Factory\AsyncFactory\AsyncFactory\obj\Debug\net6.0\AsyncFactory.GeneratedMSBuildEditorConfig.editorconfig
+D:\Design_patterns\Factory\AsyncFactory\AsyncFactory\obj\Debug\net6.0\AsyncFactory.AssemblyInfoInputs.cache
+D:\Design_patterns\Factory\AsyncFactory\AsyncFactory\obj\Debug\net6.0\AsyncFactory.AssemblyInfo.cs
+D:\Design_patterns\Factory\AsyncFactory\AsyncFactory\obj\Debug\net6.0\AsyncFactory.csproj.CoreCompileInputs.cache
+D:\Design_patterns\Factory\AsyncFactory\AsyncFactory\bin\Debug\net6.0\AsyncFactory.exe
+D:\Design_patterns\Factory\AsyncFactory\AsyncFactory\bin\Debug\net6.0\AsyncFactory.deps.json
+D:\Design_patterns\Factory\AsyncFactory\AsyncFactory\bin\Debug\net6.0\AsyncFactory.runtimeconfig.json
+D:\Design_patterns\Factory\AsyncFactory\AsyncFactory\bin\Debug\net6.0\AsyncFactory.dll
+D:\Design_patterns\Factory\AsyncFactory\AsyncFactory\bin\Debug\net6.0\AsyncFactory.pdb
+D:\Design_patterns\Factory\AsyncFactory\AsyncFactory\obj\Debug\net6.0\AsyncFactory.dll
+D:\Design_patterns\Factory\AsyncFactory\AsyncFactory\obj\Debug\net6.0\refint\AsyncFactory.dll
+D:\Design_patterns\Factory\AsyncFactory\AsyncFactory\obj\Debug\net6.0\AsyncFactory.pdb
+D:\Design_patterns\Factory\AsyncFactory\AsyncFactory\obj\Debug\net6.0\AsyncFactory.genruntimeconfig.cache
+D:\Design_patterns\Factory\AsyncFactory\AsyncFactory\obj\Debug\net6.0\ref\AsyncFactory.dll
