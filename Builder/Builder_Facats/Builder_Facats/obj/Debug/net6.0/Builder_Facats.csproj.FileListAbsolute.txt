@@ -1,0 +1,15 @@
+D:\Design_patterns\Builder_Facats\Builder_Facats\bin\Debug\net6.0\Builder_Facats.exe
+D:\Design_patterns\Builder_Facats\Builder_Facats\bin\Debug\net6.0\Builder_Facats.deps.json
+D:\Design_patterns\Builder_Facats\Builder_Facats\bin\Debug\net6.0\Builder_Facats.runtimeconfig.json
+D:\Design_patterns\Builder_Facats\Builder_Facats\bin\Debug\net6.0\Builder_Facats.dll
+D:\Design_patterns\Builder_Facats\Builder_Facats\bin\Debug\net6.0\Builder_Facats.pdb
+D:\Design_patterns\Builder_Facats\Builder_Facats\obj\Debug\net6.0\Builder_Facats.csproj.AssemblyReference.cache
+D:\Design_patterns\Builder_Facats\Builder_Facats\obj\Debug\net6.0\Builder_Facats.GeneratedMSBuildEditorConfig.editorconfig
+D:\Design_patterns\Builder_Facats\Builder_Facats\obj\Debug\net6.0\Builder_Facats.AssemblyInfoInputs.cache
+D:\Design_patterns\Builder_Facats\Builder_Facats\obj\Debug\net6.0\Builder_Facats.AssemblyInfo.cs
+D:\Design_patterns\Builder_Facats\Builder_Facats\obj\Debug\net6.0\Builder_Facats.csproj.CoreCompileInputs.cache
+D:\Design_patterns\Builder_Facats\Builder_Facats\obj\Debug\net6.0\Builder_Facats.dll
+D:\Design_patterns\Builder_Facats\Builder_Facats\obj\Debug\net6.0\refint\Builder_Facats.dll
+D:\Design_patterns\Builder_Facats\Builder_Facats\obj\Debug\net6.0\Builder_Facats.pdb
+D:\Design_patterns\Builder_Facats\Builder_Facats\obj\Debug\net6.0\Builder_Facats.genruntimeconfig.cache
+D:\Design_patterns\Builder_Facats\Builder_Facats\obj\Debug\net6.0\ref\Builder_Facats.dll

@@ -1,0 +1,15 @@
+D:\Design_patterns\Task1\Task1\bin\Debug\net6.0\Task1.exe
+D:\Design_patterns\Task1\Task1\bin\Debug\net6.0\Task1.deps.json
+D:\Design_patterns\Task1\Task1\bin\Debug\net6.0\Task1.runtimeconfig.json
+D:\Design_patterns\Task1\Task1\bin\Debug\net6.0\Task1.dll
+D:\Design_patterns\Task1\Task1\bin\Debug\net6.0\Task1.pdb
+D:\Design_patterns\Task1\Task1\obj\Debug\net6.0\Task1.csproj.AssemblyReference.cache
+D:\Design_patterns\Task1\Task1\obj\Debug\net6.0\Task1.GeneratedMSBuildEditorConfig.editorconfig
+D:\Design_patterns\Task1\Task1\obj\Debug\net6.0\Task1.AssemblyInfoInputs.cache
+D:\Design_patterns\Task1\Task1\obj\Debug\net6.0\Task1.AssemblyInfo.cs
+D:\Design_patterns\Task1\Task1\obj\Debug\net6.0\Task1.csproj.CoreCompileInputs.cache
+D:\Design_patterns\Task1\Task1\obj\Debug\net6.0\Task1.dll
+D:\Design_patterns\Task1\Task1\obj\Debug\net6.0\refint\Task1.dll
+D:\Design_patterns\Task1\Task1\obj\Debug\net6.0\Task1.pdb
+D:\Design_patterns\Task1\Task1\obj\Debug\net6.0\Task1.genruntimeconfig.cache
+D:\Design_patterns\Task1\Task1\obj\Debug\net6.0\ref\Task1.dll
