@@ -1,0 +1,15 @@
+D:\Design_patterns\Factory\ICloneableIsBad\ICloneableIsBad\bin\Debug\net6.0\ICloneableIsBad.exe
+D:\Design_patterns\Factory\ICloneableIsBad\ICloneableIsBad\bin\Debug\net6.0\ICloneableIsBad.deps.json
+D:\Design_patterns\Factory\ICloneableIsBad\ICloneableIsBad\bin\Debug\net6.0\ICloneableIsBad.runtimeconfig.json
+D:\Design_patterns\Factory\ICloneableIsBad\ICloneableIsBad\bin\Debug\net6.0\ICloneableIsBad.dll
+D:\Design_patterns\Factory\ICloneableIsBad\ICloneableIsBad\bin\Debug\net6.0\ICloneableIsBad.pdb
+D:\Design_patterns\Factory\ICloneableIsBad\ICloneableIsBad\obj\Debug\net6.0\ICloneableIsBad.csproj.AssemblyReference.cache
+D:\Design_patterns\Factory\ICloneableIsBad\ICloneableIsBad\obj\Debug\net6.0\ICloneableIsBad.GeneratedMSBuildEditorConfig.editorconfig
+D:\Design_patterns\Factory\ICloneableIsBad\ICloneableIsBad\obj\Debug\net6.0\ICloneableIsBad.AssemblyInfoInputs.cache
+D:\Design_patterns\Factory\ICloneableIsBad\ICloneableIsBad\obj\Debug\net6.0\ICloneableIsBad.AssemblyInfo.cs
+D:\Design_patterns\Factory\ICloneableIsBad\ICloneableIsBad\obj\Debug\net6.0\ICloneableIsBad.csproj.CoreCompileInputs.cache
+D:\Design_patterns\Factory\ICloneableIsBad\ICloneableIsBad\obj\Debug\net6.0\ICloneableIsBad.dll
+D:\Design_patterns\Factory\ICloneableIsBad\ICloneableIsBad\obj\Debug\net6.0\refint\ICloneableIsBad.dll
+D:\Design_patterns\Factory\ICloneableIsBad\ICloneableIsBad\obj\Debug\net6.0\ICloneableIsBad.pdb
+D:\Design_patterns\Factory\ICloneableIsBad\ICloneableIsBad\obj\Debug\net6.0\ICloneableIsBad.genruntimeconfig.cache
+D:\Design_patterns\Factory\ICloneableIsBad\ICloneableIsBad\obj\Debug\net6.0\ref\ICloneableIsBad.dll
