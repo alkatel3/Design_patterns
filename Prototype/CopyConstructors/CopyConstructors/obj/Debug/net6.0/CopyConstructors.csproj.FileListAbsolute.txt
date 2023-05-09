@@ -1,0 +1,15 @@
+D:\Design_patterns\Prototype\CopyConstructors\CopyConstructors\bin\Debug\net6.0\CopyConstructors.exe
+D:\Design_patterns\Prototype\CopyConstructors\CopyConstructors\bin\Debug\net6.0\CopyConstructors.deps.json
+D:\Design_patterns\Prototype\CopyConstructors\CopyConstructors\bin\Debug\net6.0\CopyConstructors.runtimeconfig.json
+D:\Design_patterns\Prototype\CopyConstructors\CopyConstructors\bin\Debug\net6.0\CopyConstructors.dll
+D:\Design_patterns\Prototype\CopyConstructors\CopyConstructors\bin\Debug\net6.0\CopyConstructors.pdb
+D:\Design_patterns\Prototype\CopyConstructors\CopyConstructors\obj\Debug\net6.0\CopyConstructors.csproj.AssemblyReference.cache
+D:\Design_patterns\Prototype\CopyConstructors\CopyConstructors\obj\Debug\net6.0\CopyConstructors.GeneratedMSBuildEditorConfig.editorconfig
+D:\Design_patterns\Prototype\CopyConstructors\CopyConstructors\obj\Debug\net6.0\CopyConstructors.AssemblyInfoInputs.cache
+D:\Design_patterns\Prototype\CopyConstructors\CopyConstructors\obj\Debug\net6.0\CopyConstructors.AssemblyInfo.cs
+D:\Design_patterns\Prototype\CopyConstructors\CopyConstructors\obj\Debug\net6.0\CopyConstructors.csproj.CoreCompileInputs.cache
+D:\Design_patterns\Prototype\CopyConstructors\CopyConstructors\obj\Debug\net6.0\CopyConstructors.dll
+D:\Design_patterns\Prototype\CopyConstructors\CopyConstructors\obj\Debug\net6.0\refint\CopyConstructors.dll
+D:\Design_patterns\Prototype\CopyConstructors\CopyConstructors\obj\Debug\net6.0\CopyConstructors.pdb
+D:\Design_patterns\Prototype\CopyConstructors\CopyConstructors\obj\Debug\net6.0\CopyConstructors.genruntimeconfig.cache
+D:\Design_patterns\Prototype\CopyConstructors\CopyConstructors\obj\Debug\net6.0\ref\CopyConstructors.dll
