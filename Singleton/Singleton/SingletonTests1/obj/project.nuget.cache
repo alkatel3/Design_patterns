@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "8UsV5XUqwX/F5A7+M6JrUhQ6hq+dd/o5n5iX8CdRE4RkfR/AGud/RC3Qu6aOGzLC2jSXDKVKP7IHeaPwmNR4ZQ==",
+  "dgSpecHash": "4mEMSKEfcRuZG9Y6ZKcwOr2RgHbvbFyfbMwxFQwff+168uU1P5OvzSLbAZcPFS2AGzbdnwvjCx4g3wNQUr1kbQ==",
   "success": true,
   "projectFilePath": "D:\\Design_patterns\\Singleton\\Singleton\\SingletonTests1\\SingletonTests1.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Dell\\.nuget\\packages\\autofac\\7.0.1\\autofac.7.0.1.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\coverlet.collector\\3.2.0\\coverlet.collector.3.2.0.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\microsoft.codecoverage\\17.5.0\\microsoft.codecoverage.17.5.0.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\microsoft.net.test.sdk\\17.5.0\\microsoft.net.test.sdk.17.5.0.nupkg.sha512",
@@ -21,6 +22,7 @@
     "C:\\Users\\Dell\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\system.diagnostics.debug\\4.3.0\\system.diagnostics.debug.4.3.0.nupkg.sha512",
+    "C:\\Users\\Dell\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.7.1\\system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\system.diagnostics.textwritertracelistener\\4.3.0\\system.diagnostics.textwritertracelistener.4.3.0.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\system.diagnostics.tracesource\\4.3.0\\system.diagnostics.tracesource.4.3.0.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\system.globalization\\4.3.0\\system.globalization.4.3.0.nupkg.sha512",
