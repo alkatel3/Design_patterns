@@ -1,0 +1,15 @@
+D:\Design_patterns\Singleton\MonoState\MonoState\bin\Debug\net6.0\MonoState.exe
+D:\Design_patterns\Singleton\MonoState\MonoState\bin\Debug\net6.0\MonoState.deps.json
+D:\Design_patterns\Singleton\MonoState\MonoState\bin\Debug\net6.0\MonoState.runtimeconfig.json
+D:\Design_patterns\Singleton\MonoState\MonoState\bin\Debug\net6.0\MonoState.dll
+D:\Design_patterns\Singleton\MonoState\MonoState\bin\Debug\net6.0\MonoState.pdb
+D:\Design_patterns\Singleton\MonoState\MonoState\obj\Debug\net6.0\MonoState.csproj.AssemblyReference.cache
+D:\Design_patterns\Singleton\MonoState\MonoState\obj\Debug\net6.0\MonoState.GeneratedMSBuildEditorConfig.editorconfig
+D:\Design_patterns\Singleton\MonoState\MonoState\obj\Debug\net6.0\MonoState.AssemblyInfoInputs.cache
+D:\Design_patterns\Singleton\MonoState\MonoState\obj\Debug\net6.0\MonoState.AssemblyInfo.cs
+D:\Design_patterns\Singleton\MonoState\MonoState\obj\Debug\net6.0\MonoState.csproj.CoreCompileInputs.cache
+D:\Design_patterns\Singleton\MonoState\MonoState\obj\Debug\net6.0\MonoState.dll
+D:\Design_patterns\Singleton\MonoState\MonoState\obj\Debug\net6.0\refint\MonoState.dll
+D:\Design_patterns\Singleton\MonoState\MonoState\obj\Debug\net6.0\MonoState.pdb
+D:\Design_patterns\Singleton\MonoState\MonoState\obj\Debug\net6.0\MonoState.genruntimeconfig.cache
+D:\Design_patterns\Singleton\MonoState\MonoState\obj\Debug\net6.0\ref\MonoState.dll
