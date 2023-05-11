@@ -35,6 +35,19 @@ namespace Singleton
         public static SingletoDatabase Instance = instance.Value;
     }
 
+    public class SingletonRecordFinder
+    {
+        public int TotalPopulation(IEnumerable<string> names)
+        {
+            int result = 0;
+            foreach(var name in names)
+            {
+                result += SingletoDatabase.Instance.GetPopulation(name);
+            }
+            return result;
+        }
+    }
+
     public class Program
     {
         public static void Main(string[] args)
