@@ -1,0 +1,15 @@
+D:\Design_patterns\Singleton\Multiton\Multiton\obj\Debug\net6.0\Multiton.csproj.AssemblyReference.cache
+D:\Design_patterns\Singleton\Multiton\Multiton\obj\Debug\net6.0\Multiton.GeneratedMSBuildEditorConfig.editorconfig
+D:\Design_patterns\Singleton\Multiton\Multiton\obj\Debug\net6.0\Multiton.AssemblyInfoInputs.cache
+D:\Design_patterns\Singleton\Multiton\Multiton\obj\Debug\net6.0\Multiton.AssemblyInfo.cs
+D:\Design_patterns\Singleton\Multiton\Multiton\obj\Debug\net6.0\Multiton.csproj.CoreCompileInputs.cache
+D:\Design_patterns\Singleton\Multiton\Multiton\bin\Debug\net6.0\Multiton.exe
+D:\Design_patterns\Singleton\Multiton\Multiton\bin\Debug\net6.0\Multiton.deps.json
+D:\Design_patterns\Singleton\Multiton\Multiton\bin\Debug\net6.0\Multiton.runtimeconfig.json
+D:\Design_patterns\Singleton\Multiton\Multiton\bin\Debug\net6.0\Multiton.dll
+D:\Design_patterns\Singleton\Multiton\Multiton\bin\Debug\net6.0\Multiton.pdb
+D:\Design_patterns\Singleton\Multiton\Multiton\obj\Debug\net6.0\Multiton.dll
+D:\Design_patterns\Singleton\Multiton\Multiton\obj\Debug\net6.0\refint\Multiton.dll
+D:\Design_patterns\Singleton\Multiton\Multiton\obj\Debug\net6.0\Multiton.pdb
+D:\Design_patterns\Singleton\Multiton\Multiton\obj\Debug\net6.0\Multiton.genruntimeconfig.cache
+D:\Design_patterns\Singleton\Multiton\Multiton\obj\Debug\net6.0\ref\Multiton.dll
