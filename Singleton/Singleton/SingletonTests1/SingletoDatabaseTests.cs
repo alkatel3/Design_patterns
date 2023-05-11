@@ -1,12 +1,5 @@
 ﻿using Autofac;
 using NUnit.Framework;
-using Singleton;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Singleton.Tests
 {
@@ -18,7 +11,12 @@ namespace Singleton.Tests
         [SetUp]
         private void SetUp()
         {
-            var cb =new ContainerBuilder()
+            var cb = new ContainerBuilder();
+            cb.RegisterType<DummyDatabase>()
+            .As<IDatabase>()
+            .SingleInstance();
+            cb.RegisterType<ConfigurableRecordFinder>();
+            container = cb.Build();
         }
 
         [Test]
@@ -46,8 +44,7 @@ namespace Singleton.Tests
         [Test]
         public void DependentTotalPopulationTest()
         {
-            var db = new DummyDatabase();
-            var rf = new CongigurableRecordFinder();
+            var rf = container.Resolve<ConfigurableRecordFinder>();
 
             Assert.That(
                 rf.TotalPopulation(new[] { "anpha", "gamma" }),
