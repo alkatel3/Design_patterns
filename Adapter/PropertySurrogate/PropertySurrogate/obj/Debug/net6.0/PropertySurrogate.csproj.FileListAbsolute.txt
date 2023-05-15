@@ -1,0 +1,15 @@
+D:\Design_patterns\Adapter\PropertySurrogate\PropertySurrogate\bin\Debug\net6.0\PropertySurrogate.exe
+D:\Design_patterns\Adapter\PropertySurrogate\PropertySurrogate\bin\Debug\net6.0\PropertySurrogate.deps.json
+D:\Design_patterns\Adapter\PropertySurrogate\PropertySurrogate\bin\Debug\net6.0\PropertySurrogate.runtimeconfig.json
+D:\Design_patterns\Adapter\PropertySurrogate\PropertySurrogate\bin\Debug\net6.0\PropertySurrogate.dll
+D:\Design_patterns\Adapter\PropertySurrogate\PropertySurrogate\bin\Debug\net6.0\PropertySurrogate.pdb
+D:\Design_patterns\Adapter\PropertySurrogate\PropertySurrogate\obj\Debug\net6.0\PropertySurrogate.csproj.AssemblyReference.cache
+D:\Design_patterns\Adapter\PropertySurrogate\PropertySurrogate\obj\Debug\net6.0\PropertySurrogate.GeneratedMSBuildEditorConfig.editorconfig
+D:\Design_patterns\Adapter\PropertySurrogate\PropertySurrogate\obj\Debug\net6.0\PropertySurrogate.AssemblyInfoInputs.cache
+D:\Design_patterns\Adapter\PropertySurrogate\PropertySurrogate\obj\Debug\net6.0\PropertySurrogate.AssemblyInfo.cs
+D:\Design_patterns\Adapter\PropertySurrogate\PropertySurrogate\obj\Debug\net6.0\PropertySurrogate.csproj.CoreCompileInputs.cache
+D:\Design_patterns\Adapter\PropertySurrogate\PropertySurrogate\obj\Debug\net6.0\PropertySurrogate.dll
+D:\Design_patterns\Adapter\PropertySurrogate\PropertySurrogate\obj\Debug\net6.0\refint\PropertySurrogate.dll
+D:\Design_patterns\Adapter\PropertySurrogate\PropertySurrogate\obj\Debug\net6.0\PropertySurrogate.pdb
+D:\Design_patterns\Adapter\PropertySurrogate\PropertySurrogate\obj\Debug\net6.0\PropertySurrogate.genruntimeconfig.cache
+D:\Design_patterns\Adapter\PropertySurrogate\PropertySurrogate\obj\Debug\net6.0\ref\PropertySurrogate.dll
