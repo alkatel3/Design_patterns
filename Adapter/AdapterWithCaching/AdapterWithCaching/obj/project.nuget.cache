@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "vyYrgjirK4h3jANuMVg7nB9LKHISAX8p9d7Dz9+I5QaJVwv7W/+66vAeW7HkYJuofP6WY+segO593Z5IC3JdZA==",
+  "success": true,
+  "projectFilePath": "D:\\Design_patterns\\Adapter\\AdapterWithCaching\\AdapterWithCaching\\AdapterWithCaching.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Dell\\.nuget\\packages\\morelinq\\3.4.2\\morelinq.3.4.2.nupkg.sha512"
+  ],
+  "logs": []
+}
