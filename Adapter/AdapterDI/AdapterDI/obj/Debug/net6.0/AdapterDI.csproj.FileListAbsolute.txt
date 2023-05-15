@@ -1,0 +1,17 @@
+D:\Design_patterns\Adapter\AdapterDI\AdapterDI\bin\Debug\net6.0\AdapterDI.exe
+D:\Design_patterns\Adapter\AdapterDI\AdapterDI\bin\Debug\net6.0\AdapterDI.deps.json
+D:\Design_patterns\Adapter\AdapterDI\AdapterDI\bin\Debug\net6.0\AdapterDI.runtimeconfig.json
+D:\Design_patterns\Adapter\AdapterDI\AdapterDI\bin\Debug\net6.0\AdapterDI.dll
+D:\Design_patterns\Adapter\AdapterDI\AdapterDI\bin\Debug\net6.0\AdapterDI.pdb
+D:\Design_patterns\Adapter\AdapterDI\AdapterDI\bin\Debug\net6.0\Autofac.dll
+D:\Design_patterns\Adapter\AdapterDI\AdapterDI\obj\Debug\net6.0\AdapterDI.csproj.AssemblyReference.cache
+D:\Design_patterns\Adapter\AdapterDI\AdapterDI\obj\Debug\net6.0\AdapterDI.GeneratedMSBuildEditorConfig.editorconfig
+D:\Design_patterns\Adapter\AdapterDI\AdapterDI\obj\Debug\net6.0\AdapterDI.AssemblyInfoInputs.cache
+D:\Design_patterns\Adapter\AdapterDI\AdapterDI\obj\Debug\net6.0\AdapterDI.AssemblyInfo.cs
+D:\Design_patterns\Adapter\AdapterDI\AdapterDI\obj\Debug\net6.0\AdapterDI.csproj.CoreCompileInputs.cache
+D:\Design_patterns\Adapter\AdapterDI\AdapterDI\obj\Debug\net6.0\AdapterDI.csproj.CopyComplete
+D:\Design_patterns\Adapter\AdapterDI\AdapterDI\obj\Debug\net6.0\AdapterDI.dll
+D:\Design_patterns\Adapter\AdapterDI\AdapterDI\obj\Debug\net6.0\refint\AdapterDI.dll
+D:\Design_patterns\Adapter\AdapterDI\AdapterDI\obj\Debug\net6.0\AdapterDI.pdb
+D:\Design_patterns\Adapter\AdapterDI\AdapterDI\obj\Debug\net6.0\AdapterDI.genruntimeconfig.cache
+D:\Design_patterns\Adapter\AdapterDI\AdapterDI\obj\Debug\net6.0\ref\AdapterDI.dll

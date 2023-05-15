@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "aL8z0uiYu/H9+y0Kb0nxOXpVeV1C+I/kEPjELD+NTt4+npEjWzJ4x2tI/vim5KcnnlHA4hjxg1npKL7mj43zwg==",
+  "success": true,
+  "projectFilePath": "D:\\Design_patterns\\Adapter\\AdapterDI\\AdapterDI\\AdapterDI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Dell\\.nuget\\packages\\autofac\\7.0.1\\autofac.7.0.1.nupkg.sha512",
+    "C:\\Users\\Dell\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.7.1\\system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512"
+  ],
+  "logs": []
+}
