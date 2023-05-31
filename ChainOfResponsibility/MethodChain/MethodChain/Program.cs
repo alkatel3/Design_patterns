@@ -1,15 +1,70 @@
 ﻿namespace MethodChain
 {
+    //CQS (CQRS)
+    public class Query
+    {
+        public string CreatureName;
+
+        public enum Argument
+        {
+            Attack, Defense
+        }
+
+        public Argument WhatToQuery;
+
+        public int Value; //bidirectional
+
+        public Query(string creatureName, Argument whatToQuery, int value)
+        {
+            CreatureName = creatureName;
+            WhatToQuery = whatToQuery;
+            Value = value;
+        }
+    }
+
+    public class Game
+    {
+        public event EventHandler<Query> Queries;
+
+        public void PerformQquery(object sender, Query q)
+        {
+            Queries?.Invoke(sender, q);
+        }
+    }
+
     public class Creature
     {
+        private readonly Game game;
         public string Name;
-        public int Attack, Defense;
+        private int attack;
+        private int defense;
 
-        public Creature(string name, int attack, int defense)
+        public Creature(Game game, string name, int attack, int defense)
         {
+            this.game = game;
             Name = name;
-            Attack = attack;
-            Defense = defense;
+            this.attack = attack;
+            this.defense = defense;
+        }
+
+        public int Attack
+        {
+            get
+            {
+                var q = new Query(Name, Query.Argument.Defense, defense);
+                game.PerformQquery(this, q);
+                return q.Value;
+            }
+        }
+
+        public int Defense
+        {
+            get
+            {
+                var q = new Query(Name, Query.Argument.Attack, attack);
+                game.PerformQquery(this, q);
+                return q.Value;
+            }
         }
 
         public override string ToString()
@@ -20,95 +75,73 @@
         }
     }
 
-    public class CreatureModifier
+    public abstract class CreatureModifier :IDisposable
     {
+        protected Game game;
         protected Creature creature;
 
-        //singly linked list
-        private CreatureModifier next;
-
-        public CreatureModifier(Creature creature)
+        public CreatureModifier(Game game, Creature creature)
         {
+            this.game = game;
             this.creature = creature;
+            game.Queries += Handle;
         }
 
-        public void Add(CreatureModifier m)
+        protected abstract void Handle(object? sender, Query q);
+
+        public void Dispose()
         {
-            if (next != null)
-            {
-                next.Add(m);
-            }
-            else
-            {
-                next = m;
-            }
+            game.Queries -= Handle;
         }
 
-        public virtual void Handle() => next?.Handle();
     }
 
     public class DoubleAttackModifier : CreatureModifier
     {
-        public DoubleAttackModifier(Creature creature) 
-            : base(creature)
-        {
-        }
+        public DoubleAttackModifier(Game game, Creature creature)
+            : base(game, creature)  {   }
 
-        public override void Handle()
+        protected override void Handle(object? sender, Query q)
         {
-            Console.WriteLine($"Doubling {creature.Name}'s attack");
-            creature.Attack *= 2;
-            base.Handle();
+            if (q.CreatureName == creature.Name &&
+                q.WhatToQuery == Query.Argument.Attack)
+                q.Value *= 2;
         }
     }
 
     public class IncreaseDefenseModifier : CreatureModifier
     {
-        public IncreaseDefenseModifier(Creature creature) 
-            : base(creature)
+        public IncreaseDefenseModifier(Game game, Creature creature) 
+            : base(game, creature)
         {
         }
 
-        public override void Handle()
+        protected override void Handle(object? sender, Query q)
         {
-            if (creature.Attack <= 2)
-            {
-                Console.WriteLine($"Increasing {creature.Name}'s defense");
-                creature.Defense++;
-            }
-            base.Handle();
+            if (q.CreatureName == creature.Name &&
+                q.WhatToQuery == Query.Argument.Defense)
+                q.Value += 2;
         }
-    }
-
-    public class NoBobuaeaModifier : CreatureModifier
-    {
-        public NoBobuaeaModifier(Creature creature) 
-            : base(creature)
-        {
-        }
-        public override void Handle()
-        {
-            
-        }
-    }
+    } 
 
     public class Program
     {
         static void Main(string[] args)
         {
-            var goblin = new Creature("Goblin", 1, 1);
+            var game = new Game();
+
+            var goblin = new Creature(game, "Strong Goblin", 2, 2);
             Console.WriteLine(goblin);
 
-            var root = new CreatureModifier(goblin);
-
-            //root.Add(new NoBobuaeaModifier(goblin));
-
-            root.Add(new DoubleAttackModifier(goblin));
-            root.Add(new DoubleAttackModifier(goblin));
-            root.Add(new IncreaseDefenseModifier(goblin));
-
-            root.Handle();
-            Console.WriteLine(goblin);
+            using(new DoubleAttackModifier(game, goblin))
+            {
+                Console.WriteLine(goblin);
+                using(new IncreaseDefenseModifier(game, goblin))
+                {
+                    Console.WriteLine(goblin);
+                }
+            }
+            Console.WriteLine(goblin); ;
         }
     }
 }
