@@ -109,7 +109,7 @@ namespace Command
                 
             }
 
-            public void Call()
+            public virtual void Call()
             {
                 Success = true;
                 ForEach(cmd =>
@@ -119,7 +119,7 @@ namespace Command
                 });
             }
 
-            public void Undo()
+            public virtual void Undo()
             {
                 foreach(var cmd in ((IEnumerable<BankAccountCommand>)this).Reverse())
                 {
@@ -128,24 +128,51 @@ namespace Command
             }
         }
 
+        public class MoneyTransferCommand :CompositeBankAccountCommand
+        {
+            public MoneyTransferCommand(BankAccount from, BankAccount to, int amount)
+            {
+                AddRange(new[]
+                {
+                    new BankAccountCommand(from, BankAccountCommand.Action.Withdraw, amount),
+                    new BankAccountCommand(to, BankAccountCommand.Action.Deposit, amount)
+                });
+            }
+
+            public override void Call()
+            {
+                BankAccountCommand last = null;
+                foreach(var cmd in this)
+                {
+                    if (last == null || last.Success)
+                    {
+                        cmd.Call();
+                        last = cmd;
+                    }
+                    else
+                    {
+                        cmd.Undo();
+                        break;
+                    }
+                }
+            }
+        }
+
         public class Program
         {
             static void Main(string[] args)
             {
-                var ba = new BankAccount(0);
-                var cmdDeposit = new BankAccountCommand(ba, BankAccountCommand.Action.Deposit, 100);
-                var cmdWithdraw = new BankAccountCommand(ba, BankAccountCommand.Action.Withdraw, 10);
+                var from = new BankAccount(100);
+                var to = new BankAccount(0);
 
-                var comppsit = new CompositeBankAccountCommand(
-                    new[] { cmdDeposit, cmdWithdraw }
-                    );
+                var mtc = new MoneyTransferCommand(from, to, 1000);
+                mtc.Call();
+                Console.WriteLine(from);
+                Console.WriteLine(to);
 
-                comppsit.Call();
-
-                Console.WriteLine(ba);
-
-                comppsit.Undo();
-                Console.WriteLine(ba);
+                mtc.Undo();
+                Console.WriteLine(from);
+                Console.WriteLine(to);
             }
         }
     }
