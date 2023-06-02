@@ -1,4 +1,7 @@
-﻿namespace Command
+﻿using System.Diagnostics.CodeAnalysis;
+using System.Runtime.CompilerServices;
+
+namespace Command
 {
     public class BankAccount
     {
@@ -37,6 +40,7 @@
     {
         void Call();
         void Undo();
+        bool Success { get; set; }
     }
 
     public class BankAccountCommand : ICommand
@@ -50,8 +54,8 @@
 
         private Action action;
         private int amount;
-        private bool succeeded;
 
+        public bool Success { get; set; }
 
         public BankAccountCommand(BankAccount account, Action action, int amount)
         {
@@ -66,17 +70,17 @@
             {
                 case Action.Deposit:
                     account.Deposit(amount);
-                    succeeded = true;
+                    Success = true;
                     break;
                 case Action.Withdraw:
-                    succeeded = account.Withdraw(amount);
+                    Success = account.Withdraw(amount);
                     break;
             }
         }
 
         public void Undo()
         {
-            if (!succeeded) return;
+            if (!Success) return;
 
             switch (action)
             {
@@ -89,18 +93,59 @@
             }
         }
 
+        public class CompositeBankAccountCommand : List<BankAccountCommand>, ICommand
+        {
+            public bool Success { get; set; }
+
+            public CompositeBankAccountCommand()
+            {
+                
+            }
+
+            public CompositeBankAccountCommand
+                ([NotNull] IEnumerable<BankAccountCommand> collection)
+                : base(collection)
+            {
+                
+            }
+
+            public void Call()
+            {
+                Success = true;
+                ForEach(cmd =>
+                {
+                    cmd.Call();
+                    Success &= cmd.Success;
+                });
+            }
+
+            public void Undo()
+            {
+                foreach(var cmd in ((IEnumerable<BankAccountCommand>)this).Reverse())
+                {
+                    cmd.Undo();
+                }
+            }
+        }
+
         public class Program
         {
             static void Main(string[] args)
             {
-                var ba = new BankAccount(100);
-                var cmd = new BankAccountCommand(ba, BankAccountCommand.Action.Withdraw, 1000);
-                cmd.Call();
+                var ba = new BankAccount(0);
+                var cmdDeposit = new BankAccountCommand(ba, BankAccountCommand.Action.Deposit, 100);
+                var cmdWithdraw = new BankAccountCommand(ba, BankAccountCommand.Action.Withdraw, 10);
+
+                var comppsit = new CompositeBankAccountCommand(
+                    new[] { cmdDeposit, cmdWithdraw }
+                    );
+
+                comppsit.Call();
+
                 Console.WriteLine(ba);
 
-                cmd.Undo();
+                comppsit.Undo();
                 Console.WriteLine(ba);
-
             }
         }
     }
