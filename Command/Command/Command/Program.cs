@@ -5,28 +5,41 @@
         private int balance;
         private int overdraftLimit = -500;
 
+        public BankAccount(int balance)
+        {
+            this.balance = balance;
+        }
+
         public void Deposit(int amount)
         {
             balance += amount;
             Console.WriteLine($"Deposited ${amount}, balance = ${balance}");
         }
 
-        public void Withdraw(int amount)
+        public bool Withdraw(int amount)
         {
             if(balance - amount >= overdraftLimit)
             {
                 balance -= amount;
                 Console.WriteLine($"Withdrew ${amount}, balance = ${balance}");
+                return true;
             }
+            return false;
         }
 
         public override string ToString()
         {
-            return $"{nameof(balance)}: {balance}";
+            return $"{nameof(balance)}: ${balance}";
         }
     }
 
-    public class BankAccountCommand
+    public interface ICommand
+    {
+        void Call();
+        void Undo();
+    }
+
+    public class BankAccountCommand : ICommand
     {
         private BankAccount account;
 
@@ -37,6 +50,8 @@
 
         private Action action;
         private int amount;
+        private bool succeeded;
+
 
         public BankAccountCommand(BankAccount account, Action action, int amount)
         {
@@ -51,22 +66,42 @@
             {
                 case Action.Deposit:
                     account.Deposit(amount);
+                    succeeded = true;
                     break;
                 case Action.Withdraw:
-                    account.Withdraw(amount);
+                    succeeded = account.Withdraw(amount);
                     break;
             }
         }
-    }
 
-    public class Program
-    {
-        static void Main(string[] args)
+        public void Undo()
         {
-            var ba = new BankAccount();
-            var cmd = new BankAccountCommand(ba, BankAccountCommand.Action.Deposit, 100);
-            cmd.Call();
-            Console.WriteLine(ba); ;
+            if (!succeeded) return;
+
+            switch (action)
+            {
+                case Action.Deposit:
+                    account.Withdraw(amount);
+                    break;
+                case Action.Withdraw:
+                    account.Deposit(amount);
+                    break;
+            }
+        }
+
+        public class Program
+        {
+            static void Main(string[] args)
+            {
+                var ba = new BankAccount(100);
+                var cmd = new BankAccountCommand(ba, BankAccountCommand.Action.Withdraw, 1000);
+                cmd.Call();
+                Console.WriteLine(ba);
+
+                cmd.Undo();
+                Console.WriteLine(ba);
+
+            }
         }
     }
 }
