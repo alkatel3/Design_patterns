@@ -71,22 +71,84 @@
         }
     }
 
+    public class BinaryTree<T>
+    {
+        private Node<T> root;
+
+        public BinaryTree(Node<T> root)
+        {
+            this.root = root;
+        }
+
+        public InOrderIterator<T> GetEnumerator()
+        {
+            return new InOrderIterator<T>(root);
+        }
+        public IEnumerable<Node<T>> NaturalInOrder
+        {
+            get
+            {
+                IEnumerable<Node<T>> TraverseInOrder(Node<T> current)
+                {
+                    if (current.Left != null)
+                    {
+                        foreach(var left in TraverseInOrder(current.Left))
+                            yield return left;
+                    }
+
+                    yield return current;
+
+                    if (current.Right != null)
+                    {
+                        foreach (var right in TraverseInOrder(current.Right))
+                            yield return right;
+                    }
+                }
+
+                foreach (var node in TraverseInOrder(root))
+                    yield return node;
+            }
+        }
+    }
+
     public class Program
     {
         static void Main(string[] args)
         {
+            //   1
+            //  / \
+            // 2   3
+
+            // in-order:  213
+            // preorder:  123
+            // postorder: 231
+
             var root = new Node<int>(1,
                 new Node<int>(2),
                 new Node<int>(3));
 
+            // C++ style
             var it = new InOrderIterator<int>(root);
 
             while (it.MoveNext())
             {
                 Console.Write(it.Current.Value);
-                Console.Write(",");
+                Console.Write(", ");
             }
             Console.WriteLine();
+
+            // C# style
+
+            var tree = new BinaryTree<int>(root);
+
+            Console.WriteLine(string.Join(", ",
+                tree.NaturalInOrder.Select(x=>x.Value)));
+
+            // duck typing!
+            foreach (var node in tree)
+            {
+                Console.WriteLine(node.Value);
+            }
         }
     }
 }
