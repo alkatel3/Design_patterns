@@ -1,6 +1,5 @@
-﻿using System;
+﻿using ImpromptuInterface;
 using System.Dynamic;
-using ImpromptuInterface;
 using static System.Console;
 
 namespace NullObject
@@ -24,26 +23,6 @@ namespace NullObject
         }
     }
 
-    class OptionalLog : ILog
-    {
-        private readonly ILog impl;
-
-        public OptionalLog(ILog impl)
-        {
-            this.impl = impl;
-        }
-
-        public void Info(string msg)
-        {
-            impl?.Info(msg);
-        }
-
-        public void Warn(string msg)
-        {
-            impl?.Warn(msg);
-        }
-    }
-
     public class BankAccount
     {
         private ILog log;
@@ -51,14 +30,14 @@ namespace NullObject
 
         public BankAccount(ILog log)
         {
-            this.log = new OptionalLog(log);
+            this.log = log;
         }
 
         public void Deposit(int amount)
         {
             balance += amount;
             // check for null everywhere
-            log?.Info($"Deposited ${amount}, balance is now {balance}");
+            log.Info($"Deposited ${amount}, balance is now {balance}");
         }
 
         public void Withdraw(int amount)
@@ -66,29 +45,43 @@ namespace NullObject
             if (balance >= amount)
             {
                 balance -= amount;
-                log?.Info($"Withdrew ${amount}, we have ${balance} left");
+                log.Info($"Withdrew ${amount}, we have ${balance} left");
             }
             else
             {
-                log?.Warn($"Could not withdraw ${amount} because " +
+                log.Warn($"Could not withdraw ${amount} because " +
                           $"balance is only ${balance}");
             }
         }
     }
 
-    public sealed class NullLog : ILog
+    public class Null<T> : DynamicObject
+        where T : class
     {
-        public void Info(string msg) { }
-        public void Warn(string msg) { }
+        //ImpromptuInterface
+
+        public static T Instance
+        {
+            get
+            {
+                if (!typeof(T).IsInterface)
+                    throw new ArgumentException("mist be interface!");
+
+                return new Null<T>().ActLike<T>();
+            }
+        }
+        public override bool TryInvokeMember(InvokeMemberBinder binder, object?[]? args, out object? result)
+        {
+            result = Activator.CreateInstance(binder.ReturnType);
+            return true;
+        }
     }
 
     public class Program
     {
         static void Main()
         {
-            //var log = new ConsoleLog();
-            //ILog log = null;
-            var log = new NullLog();
+            var log = Null<ILog>.Instance;
             var ba = new BankAccount(log);
             ba.Deposit(100);
             ba.Withdraw(200);
